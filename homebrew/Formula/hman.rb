@@ -2,13 +2,13 @@
 #   homebrew-tap/Formula/hman.rb
 #
 # Update sha256 after a new release tag:
-#   curl -L https://github.com/ferdisahin/hman/archive/refs/tags/1.0.tar.gz | shasum -a 256
+#   curl -L https://github.com/ferdisahin/hman/archive/refs/tags/1.1.tar.gz | shasum -a 256
 
 class Hman < Formula
   desc "Terminal Hangman in English and Turkish"
   homepage "https://github.com/ferdisahin/hman"
-  url "https://github.com/ferdisahin/hman/archive/refs/tags/1.0.tar.gz"
-  sha256 "b0090d6b1d8c0be32905550132b8b1c470b269c39e2b0f477e594498d27824d6"
+  url "https://github.com/ferdisahin/hman/archive/refs/tags/1.1.tar.gz"
+  sha256 "05c34ba4ee5c647d75d77a537a0f3fd9341572df0bd4930212ef321495bbc4ad"
   license "MIT"
 
   depends_on "python@3.12"

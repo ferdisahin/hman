@@ -63,7 +63,7 @@ Homebrew installs the `hman` command under `$(brew --prefix)/bin`, which is alre
 
 ### Tap setup (maintainer)
 
-1. Tag a release: `git tag 1.0 && git push origin 1.0` ([releases](https://github.com/ferdisahin/hman/releases))
+1. Tag a release: `git tag 1.1 && git push origin refs/tags/1.1` ([releases](https://github.com/ferdisahin/hman/releases))
 2. Copy `homebrew/Formula/hman.rb` into your tap repo (`homebrew-tap/Formula/`)
 3. Update `url` and `sha256` in the formula (from the release tarball)
 4. Push the tap repo
@@ -83,7 +83,7 @@ Verify locally (the formula must live in a tap — copy `hman.rb` into `$(brew -
 brew tap-new ferdisahin/tap --no-git  # skip if the tap already exists
 cp homebrew/Formula/hman.rb "$(brew --repository ferdisahin/tap)/Formula/"
 brew install ferdisahin/tap/hman
-hman --version   # expect: hman 1.0
+hman --version   # expect: hman 1.1
 ```
 
 ### Test without Homebrew (dev)
