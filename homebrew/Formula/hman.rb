@@ -1,14 +1,14 @@
 # Copy this file to your tap repo:
-#   homebrew-tap/Formula/adam-asmaca.rb
+#   homebrew-tap/Formula/hman.rb
 #
-# Replace ferdisahin and update sha256 after tagging v1.0.0:
-#   curl -L https://github.com/ferdisahin/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz | shasum -a 256
+# Update sha256 after a new release tag:
+#   curl -L https://github.com/ferdisahin/hman/archive/refs/tags/1.0.tar.gz | shasum -a 256
 
-class AdamAsmaca < Formula
+class Hman < Formula
   desc "Terminal Hangman in English and Turkish"
-  homepage "https://github.com/ferdisahin/adam-asmaca"
-  url "https://github.com/ferdisahin/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "REPLACE_AFTER_RELEASE"
+  homepage "https://github.com/ferdisahin/hman"
+  url "https://github.com/ferdisahin/hman/archive/refs/tags/1.0.tar.gz"
+  sha256 "b0090d6b1d8c0be32905550132b8b1c470b269c39e2b0f477e594498d27824d6"
   license "MIT"
 
   depends_on "python@3.12"
