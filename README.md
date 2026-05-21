@@ -11,7 +11,7 @@ A minimal, cross-platform Hangman game for the terminal. Written in **Python 3**
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/adam-asmaca.git
+git clone https://github.com/ferdisahin/adam-asmaca.git
 cd adam-asmaca
 python3 hangman.py
 ```
@@ -50,7 +50,7 @@ One word per line. Words are normalized to lowercase at runtime.
 After you publish a [Homebrew tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap), users install once:
 
 ```bash
-brew install YOUR_GITHUB_USER/tap/adam-asmaca
+brew install ferdisahin/tap/adam-asmaca
 ```
 
 Then open any terminal and run:
@@ -65,7 +65,7 @@ Homebrew puts `hman` in `$(brew --prefix)/bin`, which is already on your `PATH` 
 
 1. Tag a release in this repo: `git tag v1.0.0 && git push origin v1.0.0`
 2. Copy `homebrew/Formula/adam-asmaca.rb` into your tap repo (`homebrew-tap/Formula/`)
-3. Set `YOUR_GITHUB_USER` and `sha256` (from the release tarball)
+3. Update `sha256` in the formula (from the release tarball)
 4. Push the tap repo
 
 Example formula snippet — the important part is the **`bin/"hman"`** name:

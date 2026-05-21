@@ -1,13 +1,13 @@
 # Copy this file to your tap repo:
 #   homebrew-tap/Formula/adam-asmaca.rb
 #
-# Replace YOUR_GITHUB_USER and update sha256 after tagging v1.0.0:
-#   curl -L https://github.com/YOUR_GITHUB_USER/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz | shasum -a 256
+# Replace ferdisahin and update sha256 after tagging v1.0.0:
+#   curl -L https://github.com/ferdisahin/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz | shasum -a 256
 
 class AdamAsmaca < Formula
   desc "Terminal Hangman in English and Turkish"
-  homepage "https://github.com/YOUR_GITHUB_USER/adam-asmaca"
-  url "https://github.com/YOUR_GITHUB_USER/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz"
+  homepage "https://github.com/ferdisahin/adam-asmaca"
+  url "https://github.com/ferdisahin/adam-asmaca/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "REPLACE_AFTER_RELEASE"
   license "MIT"
 
