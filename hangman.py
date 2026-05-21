@@ -291,7 +291,7 @@ def wants_replay(locale: Locale, answer: str) -> bool:
 
 
 def print_version() -> None:
-    print("hman 1.0.0")
+    print("hman 1.0")
 
 
 def main() -> None:

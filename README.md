@@ -1,4 +1,4 @@
-# Hangman / Adam Asmaca (Terminal)
+# hman — Terminal Hangman
 
 A minimal, cross-platform Hangman game for the terminal. Written in **Python 3** using only the standard library — no dependencies, no build step.
 
@@ -11,8 +11,8 @@ A minimal, cross-platform Hangman game for the terminal. Written in **Python 3**
 ## Quick start
 
 ```bash
-git clone https://github.com/ferdisahin/adam-asmaca.git
-cd adam-asmaca
+git clone https://github.com/ferdisahin/hman.git
+cd hman
 python3 hangman.py
 ```
 
@@ -21,20 +21,20 @@ On launch you pick a language:
 ```
 === Hangman / Adam Asmaca ===
 
-Select language / Dil seçin:
+Select language:
   1) English
-  2) Türkçe
+  2) Turkish
 
 >
 ```
 
 ## How to play
 
-1. Select **English** or **Türkçe**.
+1. Select **English** or **Turkish**.
 2. A random word is chosen from the matching word list.
 3. Guess one letter at a time.
 4. You have **6** wrong guesses before the hangman is complete.
-5. Type `quit` / `çık` (or `q`) to exit mid-round.
+5. Type `quit` or `q` to exit mid-round (Turkish mode also accepts `çık`).
 
 ## Word lists
 
@@ -45,12 +45,12 @@ Select language / Dil seçin:
 
 One word per line. Words are normalized to lowercase at runtime.
 
-## Install with Homebrew (`hman` command)
+## Install with Homebrew
 
 After you publish a [Homebrew tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap), users install once:
 
 ```bash
-brew install ferdisahin/tap/adam-asmaca
+brew install ferdisahin/tap/hman
 ```
 
 Then open any terminal and run:
@@ -59,16 +59,16 @@ Then open any terminal and run:
 hman
 ```
 
-Homebrew puts `hman` in `$(brew --prefix)/bin`, which is already on your `PATH` — no `cd` into the project folder.
+Homebrew installs the `hman` command under `$(brew --prefix)/bin`, which is already on your `PATH` — no need to `cd` into the project folder.
 
 ### Tap setup (maintainer)
 
-1. Tag a release in this repo: `git tag v1.0.0 && git push origin v1.0.0`
-2. Copy `homebrew/Formula/adam-asmaca.rb` into your tap repo (`homebrew-tap/Formula/`)
-3. Update `sha256` in the formula (from the release tarball)
+1. Tag a release: `git tag 1.0 && git push origin 1.0` ([releases](https://github.com/ferdisahin/hman/releases))
+2. Copy `homebrew/Formula/hman.rb` into your tap repo (`homebrew-tap/Formula/`)
+3. Update `url` and `sha256` in the formula (from the release tarball)
 4. Push the tap repo
 
-Example formula snippet — the important part is the **`bin/"hman"`** name:
+Example formula snippet — the install exposes the **`hman`** command:
 
 ```ruby
 (bin/"hman").write <<~EOS
@@ -77,12 +77,13 @@ Example formula snippet — the important part is the **`bin/"hman"`** name:
 EOS
 ```
 
-Verify locally:
+Verify locally (the formula must live in a tap — copy `hman.rb` into `$(brew --repository ferdisahin/tap)/Formula/` first, or create a tap):
 
 ```bash
-brew install --build-from-source ./homebrew/Formula/adam-asmaca.rb
-hman
-hman --version
+brew tap-new ferdisahin/tap --no-git  # skip if the tap already exists
+cp homebrew/Formula/hman.rb "$(brew --repository ferdisahin/tap)/Formula/"
+brew install ferdisahin/tap/hman
+hman --version   # expect: hman 1.0
 ```
 
 ### Test without Homebrew (dev)
@@ -101,11 +102,11 @@ hman
 ## Project layout
 
 ```
-adam-asmaca/
-├── hangman.py              # game logic and UI
-├── words_en.txt            # English words
-├── words_tr.txt            # Turkish words
-├── homebrew/Formula/       # copy to your tap repo
+hman/
+├── hangman.py                 # game logic and UI
+├── words_en.txt               # English words
+├── words_tr.txt               # Turkish words
+├── homebrew/Formula/hman.rb   # copy to your tap repo
 └── README.md
 ```
 
