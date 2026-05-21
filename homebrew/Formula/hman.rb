@@ -8,7 +8,7 @@ class Hman < Formula
   desc "Terminal Hangman in English and Turkish"
   homepage "https://github.com/ferdisahin/hman"
   url "https://github.com/ferdisahin/hman/archive/refs/tags/1.1.tar.gz"
-  sha256 "05c34ba4ee5c647d75d77a537a0f3fd9341572df0bd4930212ef321495bbc4ad"
+  sha256 "e0c1b0118f6ac8522ee44f2e03ce937a5f91803cc98c12c947deb24382f42d2f"
   license "MIT"
 
   depends_on "python@3.12"
